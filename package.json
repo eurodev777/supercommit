@@ -1,6 +1,6 @@
 {
   "name": "git-easy-commit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI simples para fazer commits organizados com emojis",
   "bin": {
     "gcommit": "./bin/cli.js"
