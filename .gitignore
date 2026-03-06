@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+
+# Configs de IDE
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Arquivos de cache
+.cache/
+*.log
+
+# Arquivos do npm
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Arquivos específicos do projeto CLI
+.git-easy-commit.json
+
+# Arquivos de teste temporários
+coverage/
