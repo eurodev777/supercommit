@@ -5,10 +5,12 @@ import { loadConfig, saveConfig } from "./config.js";
 export async function checkGit(branch = "master") {
   const config = loadConfig();
   let repo = config.repo || "";
+  let gitInit = false;
 
   // 1️⃣ Verifica se estamos dentro de um repositório Git
   try {
     execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
+    gitInit = true;
     console.log("✅ Repositório Git encontrado.");
   } catch {
     console.log("❌ Nenhum repositório Git encontrado. Inicializando...");
@@ -22,7 +24,7 @@ export async function checkGit(branch = "master") {
   }
 
   // 2️⃣ Pergunta pelo repositório remoto se não tiver
-  if (!repo) {
+  if (!gitInit) {
     const answer = await inquirer.prompt([
       {
         name: "repo",
